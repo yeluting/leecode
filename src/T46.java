@@ -28,4 +28,27 @@ public class T46 {
         }
     }
 
+    public List<List<Integer>> permute1(int[] nums) {
+        int length = nums.length;
+        boolean [] flag = new boolean[length];
+        huisu1(nums,new ArrayList<>(),length,flag);
+        return result;
+    }
+    public void huisu1(int[] nums, ArrayList<Integer> nowPath, int length,boolean[] flag){
+        if (length == nowPath.size()){
+            result.add(new ArrayList<Integer>(nowPath));
+            return;
+        }
+        for (int i = 0; i < length; i ++){
+            if (flag[i] == true){
+                continue;
+            }
+            flag[i] = true;
+            nowPath.add(nums[i]);
+            huisu1(nums,nowPath,length,flag);
+            nowPath.remove(nums[i]);
+            flag[i] = false;
+        }
+    }
+
 }

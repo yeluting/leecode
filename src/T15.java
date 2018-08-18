@@ -31,4 +31,30 @@ public class T15 {
         }
         return result;
     }
+
+    public List<List<Integer>> threeSum1(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);
+        int length = nums.length;
+        for (int i = 0; i < length; i ++){
+            if (i > 0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            int j = i + 1, end = length - 1;
+            while (j < end){
+                int sum = nums[i] + nums[j] + nums[end];
+                if (sum > 0){
+                    end --;
+                }else if (sum < 0){
+                    j ++;
+                }else {
+                    result.add(Arrays.asList(nums[i],nums[j],nums[end]));
+                    while (++j < end && nums[j] == nums[j-1]);
+                    while (--end > j && nums[end] == nums[end+1]);
+                }
+            }
+        }
+        return result;
+    }
+
 }

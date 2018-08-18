@@ -1,8 +1,11 @@
+/*
 import java.util.*;
 
+*/
 /**
  * Created by YLT on 2018/5/24.
- */
+ *//*
+
 
 class TreeLinkNode {
     int val;
@@ -268,7 +271,8 @@ public class swore {
     }
 
     public int NumberOf1_t15(int n) {
-       /* int count = 0;
+       */
+/* int count = 0;
         int flag = 1;
         while ((flag & 0xFFFF) != 0){
             if ((n & flag) != 0){
@@ -276,7 +280,8 @@ public class swore {
             }
             flag = flag << 1;
         }
-        return count;*/
+        return count;*//*
+
        int count = 0;
         while (n != 0){
             n = (n-1)&n;
@@ -314,7 +319,8 @@ public class swore {
 
     public ListNode deleteDuplication_t18(ListNode pHead)
     {
-        /*if (pHead == null || pHead.next == null){
+        */
+/*if (pHead == null || pHead.next == null){
             return pHead;
         }
 
@@ -342,9 +348,11 @@ public class swore {
                 }
             }
         }
-        return pHead;*/
+        return pHead;*//*
+
         //新加头节点
-        /*ListNode first = new ListNode(-1);
+        */
+/*ListNode first = new ListNode(-1);
         first.next = pHead;
         ListNode pre = first;
         while (pHead != null && pHead.next!=null){
@@ -359,7 +367,8 @@ public class swore {
                 pHead = pHead.next;
             }
         }
-        return first.next;*/
+        return first.next;*//*
+
         //递归实现
         if (pHead == null || pHead.next == null){
             return pHead;
@@ -458,7 +467,8 @@ public class swore {
             }
         }
         //对原始顺序无要求
-        /*if (array == null || array.length == 0){
+        */
+/*if (array == null || array.length == 0){
             return;
         }
         int length = array.length;
@@ -478,7 +488,8 @@ public class swore {
                 array[i] = array[j];
                 array[j] = temp;
             }
-        }*/
+        }*//*
+
     }
 
     public ListNode FindKthToTail_t22(ListNode head,int k) {
@@ -610,7 +621,8 @@ public class swore {
         return result;
     }
     //递归实现
-      /*  if (list1 == null){
+      */
+/*  if (list1 == null){
             return list2;
         }
         if (list2 ==null){
@@ -625,7 +637,8 @@ public class swore {
             result.val = list2.val;
             result.next = Merge_t25(list1,list2.next);
         }
-        return result;*/
+        return result;*//*
+
 
     public boolean HasSubtree_t26(TreeNode root1,TreeNode root2) {
         boolean result = false;
@@ -778,7 +791,8 @@ public class swore {
         }else {
             return false;
         }
-        /*if (pushA == null && popA == null){
+        */
+/*if (pushA == null && popA == null){
             return true;
         }
         if (pushA == null || popA == null || popA.length != pushA.length){
@@ -802,7 +816,8 @@ public class swore {
                 stack.pop();
             }
         }
-        return true;*/
+        return true;*//*
+
     }
 
     public ArrayList<Integer> PrintFromTopToBottom_t32(TreeNode root) {
@@ -1073,7 +1088,8 @@ public class swore {
         return getLastK(array,begin,end,k);
     }
 
-    /*TreeNode KthNode_t54(TreeNode pRoot, int k)
+    */
+/*TreeNode KthNode_t54(TreeNode pRoot, int k)
     {
         if (pRoot == null || k < 1){
             return null;
@@ -1095,7 +1111,8 @@ public class swore {
             result = getKth(pRoot.right,k);
         }
         return result;
-    }*/
+    }*//*
+
 
     int index = 0;
     TreeNode KthNode_t54(TreeNode pRoot, int k)
@@ -1312,7 +1329,8 @@ public class swore {
     }
 
     public int LastRemaining_Solution_t62(int n, int m) {
-        /*if (n ==0 || m ==0){
+        */
+/*if (n ==0 || m ==0){
             return -1;
         }
         ArrayList<Integer> numbers = new ArrayList<>();
@@ -1331,14 +1349,17 @@ public class swore {
                 count++;
             }
         }
-        return numbers.get(0);*/
+        return numbers.get(0);*//*
+
 
 
     }
 
     public int Sum_Solution_t64(int n) {
-        /*Temp[] array = new Temp[n];
-        return Temp.getSum();*/
+        */
+/*Temp[] array = new Temp[n];
+        return Temp.getSum();*//*
+
 
         int result = 0;
         int a = 1;
@@ -1428,3 +1449,4 @@ class Temp{
         return sum;
     }
 }
+*/

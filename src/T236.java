@@ -1,10 +1,13 @@
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+*/
 /**
  * Created by YLT on 2018/3/23.
- */
+ *//*
+
 public class T236 {
     int finish = 0;
     Stack<TreeNode> Path = new Stack<>();
@@ -91,3 +94,4 @@ public class T236 {
 
     }
 }
+*/

@@ -6,6 +6,20 @@ import java.util.concurrent.Callable;
  * Created by YLT on 2017/11/6.
  */
 public class T3 {
+    public int lengthOfLongestSubstring(String s) {
+        int maxLength = 0;
+        int begin = 0,end = 0;
+        HashSet<Character> set = new HashSet<>();
+        while (begin < s.length() && end < s.length()){
+            if (set.contains(s.charAt(end))){
+                set.remove(begin ++);
+            }else {
+                set.add(s.charAt(end++));
+                maxLength = Math.max(maxLength,end - begin);
+            }
+        }
+        return maxLength;
+    }
 
     public int lengthOfLongestSubstring3(String s) {
         int flags[] = new int[128];

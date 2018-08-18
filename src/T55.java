@@ -28,4 +28,5 @@ public class T55 {
         }
         return dp[length-1] >= length - 1;
     }
+
 }

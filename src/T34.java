@@ -66,7 +66,7 @@ public class T34 {
 
         int begin1 = 0, end1 = nums.length - 1;
         while (begin1 < end1) {
-            int mid = (begin1 + end1) / 2+1;
+            int mid = (begin1 + end1) / 2 + 1;
             if (nums[mid] <= target) {
                 begin1 = mid;
             } else {

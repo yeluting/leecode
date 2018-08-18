@@ -26,4 +26,22 @@ public class T19 {
         second.next = second.next.next;
         return result.next;
     }
+
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
+        ListNode result = new ListNode(0);
+        result.next = head;
+        int count = 0;
+        ListNode first = result;
+        while (count < n){
+            first = first.next;
+            count ++;
+        }
+        ListNode second = result;
+        while (first.next != null){
+            first = first.next;
+            second = second.next;
+        }
+        second.next = second.next.next;
+        return result.next;
+    }
 }

@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by YLT on 2017/9/7.
@@ -42,13 +40,29 @@ public class T56 {
         }
         return res;
     }
-    public static void main(String[] args) {
-        T56 t167 = new T56();
-        List<Interval> arg = new ArrayList<Interval>();
-        arg.add(new Interval(1,3));
-        arg.add(new Interval(2,6));
-        arg.add(new Interval(8,10));
-        arg.add(new Interval(15,18));
-        t167.merge(arg);
+
+    public List<Interval> merge1(List<Interval> intervals) {
+        if(intervals.size() <= 1){
+            return intervals;
+        }
+        List<Interval> res = new ArrayList<>();
+        Collections.sort(intervals, new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o1.start - o2.start;
+            }
+        });
+
+        Interval temp = intervals.get(0);
+        for (int i = 1; i < intervals.size(); i ++){
+            if (temp.end >= intervals.get(i).start){
+                temp.end = Math.max(temp.end,intervals.get(i).end);
+            }else {
+                res.add(temp);
+                temp = intervals.get(i);
+            }
+        }
+        res.add(temp);
+        return res;
     }
 }

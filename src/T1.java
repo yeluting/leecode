@@ -4,13 +4,6 @@ import java.util.Map;
 
 
 public class T1 {
-    public static void main(String[] args) {
-        T1 t1 = new T1();
-        int[] a = {3, 2, 4};
-        int[] end = t1.twoSum(a, 6);
-        System.out.println(end[0] + ";" + end[1]);
-    }
-
     public int[] twoSum(int[] nums, int target) {
         int []result = {-1,-1};
         HashMap<Integer,Integer> pre = new HashMap<>();
